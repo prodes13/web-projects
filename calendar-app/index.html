@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+  <title>Calendar App</title>
+  <style media="screen">
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    background-color: #fefdfd;
+    display: flex;
+    align-items: stretch;
+  }
+  .font {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .default-cursor {
+    cursor: default;
+  }
+  .center {
+    text-align: center;
+  }
+  .button {
+    border-radius: 500px;
+    outline: none;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+  .color{
+    color: #fefdfd;
+    background-color: #1819cd;
+  }
+  .border-color{
+    border-color: #1819cd;
+  }
+  .off-color{
+    color: #7c7efb;
+  }
+  #current-day-info {
+    width: 34%;
+  }
+  #current-day-info #app-name-landscape {
+    font-size: 6.2vh;
+    padding: 2vh 0 1vh;
+    border-bottom: 1px solid;
+  }
+  #current-day-info h2 {
+    font-size: 6vh;
+    font-weight: 300;
+    margin: 0 0 3vh;
+    padding-top: 3vh;
+    min-height: 80vh;
+  }
+  #current-day-info h1 {
+    font-size: 6.8vh;
+    font-weight: 600;
+    margin: 4vh 0;
+  }
+  #current-day-info #theme-landscape {
+    display: block;
+    /* padding: 16px 38px; */
+    padding: 1.8vh 3vh;
+    color: #fefdfd;
+    border: 3px solid #fefdfd;
+    font-size: 2.4vh;
+  }
+  #current-day-info #theme-landscape:hover {
+    background-color: white;
+    opacity: 0.4;
+    color: black;
+  }
+  </style>
+</head>
+<body>
+  <div id="current-day-info" class="color">
+    <h1 id="app-name-landscape" class="off-color center default-cursor">My Calendar</h1>
+    <div>
+      <h2 id="cur-year" class="current-day-heading center default-cursor">2019</h2>
+    </div>
+    <div class="">
+      <h1 id="cur-day" class="current-day-heading center default-cursor">Monday</h1>
+      <h1 id="cur-month" class="current-day-heading center default-cursor">June</h1>
+      <h1 id="cur-date" class="current-day-heading center default-cursor">23</h1>
+    </div>
+    <button id="theme-landscape" class="font button">Change theme</button>
+  </div>
+</body>
+</html>
+<!-- 4. Styling the left side -->
