@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather card</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Roboto:300,400" rel="stylesheet">
+    <style type="text/css">
+    :root {
+      --white: #fff;
+      --red: #d95720;
+      --grey: #bfbfbf;
+      --primary-font: 'Montserrat', sans-serif;
+      --secondary-font: 'Roboto', sans-serif;
+    }
+    *{
+      box-sizing: border-box;
+    }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .weather-card {
+          width: 325px;
+          height: 485px;
+          background: var(--white);
+          border-radius: 20px;
+          box-sizing: border-box;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 0 15px 10px rgba(203, 203, 199, 0.38);
+      }
+      .weather-card--landmark {
+        width: 100%;
+        height: 300px;
+        background: #fef5d2;
+        position: relative;
+      }
+      .weather-card--cityname {
+          color: var(--red);
+          text-transform: uppercase;
+          text-align: center;
+      }
+      .weather-card--cityname h1 {
+        font-size: 1em;
+        letter-spacing: 4px;
+        font-family: var(--primary-font);
+      }
+      .weather-card--details {
+        color: var(--grey);
+        font-size: .6em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: var(--secondary-font);
+        font-weight: 300;
+        text-align: center;
+      }
+      .weather-card--temperature {
+        width: 90%;
+        position: absolute;
+        bottom: 2em;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        font-family: var(--secondary-font);
+        color: var(--red);
+      }
+      .outer-temp {
+        font-size: 1em;
+        font-weight: 100;
+      }
+      .mid-temp {
+        font-size: 1.5em;
+      }
+      .current-temp {
+        font-size: 3em;
+        position: relative;
+      }
+      .left-50 {
+        transform: translate(-15%);
+      }
+      .right-50 {
+        transform: translate(15%);
+      }
+      .current-temp:after {
+        content: "\00B0";
+        position: absolute;
+        top: -.5em;
+        right: -.3em;
+      }
+      .weather-card--temperature ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .weather-card--temperature ul li {
+        display: inline-block;
+        width: 20%;
+        float:left;
+        text-align: center;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: url("golden-bridge.jpg");
+        background-size: cover;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-card">
+      <div class="weather-card--landmark">
+          <div class="picture"></div>
+      </div>
+      <div class="weather-card--cityname">
+        <h1>San Francisco</h1>
+      </div>
+      <div class="weather-card--details">
+        <span class="details--day">
+          Monday |
+        </span>
+        <span class="details--date">
+          Sept 12 |
+        </span>
+        <span class="details--time">
+          12:34
+        </span>
+      </div>
+      <div class="weather-card--temperature">
+        <ul>
+          <li class="outer-temp">22</li>
+          <li class="mid-temp left-50">26</li>
+          <li class="current-temp">29</li>
+          <li class="mid-temp right-50">28</li>
+          <li class="outer-temp">30</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
